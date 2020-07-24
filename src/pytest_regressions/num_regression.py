@@ -149,7 +149,7 @@ class NumericRegressionFixture:
                 comparison_table.columns = [f"obtained_{k}", f"expected_{k}", "diff"]
                 comparison_tables_dict[k] = comparison_table
 
-        if len(comparison_tables_dict) > 0:
+        if comparison_tables_dict:
             error_msg = "Values are not sufficiently close.\n"
             error_msg += "To update values, use --force-regen option.\n\n"
             for k, comparison_table in comparison_tables_dict.items():
